@@ -1,12 +1,10 @@
-package com.slotvinskiy.response;
-
 //2) Программно послать POST запрос на https://postman-echo.com/post
 // где в BODY передать foo1=bar1&foo2=bar2 в формате x-www-form-urlencoded
 //
 //Ответ распарсить и вывести.
 
-
 import com.google.gson.Gson;
+import com.slotvinskiy.response_model.MyResponseBodyClass;
 import okhttp3.*;
 
 import java.io.IOException;

@@ -1,10 +1,10 @@
-package com.slotvinskiy.response;
+package com.slotvinskiy.response_model;
 
 import java.util.Arrays;
 
 public class Files {
 
-    String[] files;
+    private String[] files;
 
     @Override
     public String toString() {
