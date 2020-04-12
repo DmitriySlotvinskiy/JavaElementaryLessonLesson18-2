@@ -27,11 +27,11 @@ public class PostmanEchoPostRequest {
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .build();
         String postBody = "foo1=bar1&foo2=bar2";
-        RequestBody body = RequestBody.create(
+        RequestBody requestBody = RequestBody.create(
                 MediaType.parse("application/x-www-form-urlencoded"), postBody);
         Request request = new Request.Builder()
                 .url(URL)
-                .post(body)
+                .post(requestBody)
                 .build();
         String responseBody = new String();
         try {
@@ -42,7 +42,7 @@ public class PostmanEchoPostRequest {
 
             responseBody = response.body().string();
 
-            System.out.println(responseBody);
+//            System.out.println(responseBody);// Here you can check original Json response
         } catch (IOException e) {
             e.printStackTrace();
         }

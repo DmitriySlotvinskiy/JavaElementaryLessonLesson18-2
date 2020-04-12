@@ -1,14 +1,31 @@
 package com.slotvinskiy.response_model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Headers {
 
-    private String xForwardedProto;
-    private String host;
-    private String contentLength;
-    private String acceptEncoding;
-    private String contentType;
-    private String userAgent;
-    private String xForwardedPort;
+    @SerializedName("x-forwarded-proto")
+    @Expose
+    public String xForwardedProto;
+    @SerializedName("host")
+    @Expose
+    public String host;
+    @SerializedName("content-length")
+    @Expose
+    public String contentLength;
+    @SerializedName("accept-encoding")
+    @Expose
+    public String acceptEncoding;
+    @SerializedName("content-type")
+    @Expose
+    public String contentType;
+    @SerializedName("user-agent")
+    @Expose
+    public String userAgent;
+    @SerializedName("x-forwarded-port")
+    @Expose
+    public String xForwardedPort;
 
     @Override
     public String toString() {
